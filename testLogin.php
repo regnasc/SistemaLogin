@@ -18,7 +18,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
         if (!$result) {
             unset($_SESSION['email']);
             unset($_SESSION['senha']);
-            header('Location: login.php');
+            header('Location: login.html');
         } else {
             $_SESSION['email'] = $email;
             $_SESSION['senha'] = $senha;
@@ -28,6 +28,6 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
         echo "Erro na consulta: " . $e->getMessage();
     }
 } else {
-    header('Location: login.php');
+    header('Location: login.html');
 }
 ?>
